@@ -3,8 +3,7 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-# [About "error:0308010C:digital envelope routines::unsupported" · Issue #3095 · vuejs/vuepress](https://github.com/vuejs/vuepress/issues/3095 )
-# set NODE_OPTIONS=--openssl-legacy-provider
+rm -rf ./dist
 
 # 生成静态文件
 npm run build
