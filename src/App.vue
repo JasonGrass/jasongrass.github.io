@@ -1,9 +1,11 @@
 <script setup>
 
+import CardContainer from './components/CardContainer.vue';
+
 </script>
 
 <template>
-    <h1>建设中...</h1>
+    <CardContainer></CardContainer>
 </template>
 
 <style scoped></style>
