@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, ref } from 'vue'
+import { ref } from 'vue'
 
 const props = defineProps({
     info: {
@@ -10,17 +10,14 @@ const props = defineProps({
 
 const { title, description, url, icon, icon2 } = props.info
 
-const cardIcon = ref("")
-
-// 异步加载图标
-import(icon).then(i => {
-    cardIcon.value = i.default
-}).catch(err => {
-    // 如果失败，则使用备份的 ICON 链接
-    console.warn("load icon error", err)
-    cardIcon.value = icon2
+const cardIcon = ref(icon)
+const handleIconError = (e) => {
+    console.warn("load icon error", e)
+    // 如果默认的静态图片加载失败，在使用备份的 ICON 链接
+    if (e.target.src.includes(icon)) {
+        cardIcon.value = icon2
+    }
 }
-)
 
 const jumpLink = (e) => {
     if (url) {
@@ -33,7 +30,7 @@ const jumpLink = (e) => {
 <template>
     <div class="item" @click="jumpLink">
         <div class="header">
-            <img class="icon" :src="cardIcon" alt="">
+            <img class="icon" :src="cardIcon" alt="" @error="handleIconError">
             <span class="title">{{ title }}</span>
         </div>
         <span class="description">{{ description }}</span>
