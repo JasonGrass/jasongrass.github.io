@@ -30,8 +30,17 @@ export const activeBookmarks = [
     id: 103,
     title: "Web tools",
     description: "为自己服务，偶尔用用的开发辅助工具页面",
-    url: "https://web-tools-psi.vercel.app/",
+    url: "https://tools.jgrass.xyz/",
     icon: "/assets/icons/tool-box.png",
+    icon2:
+      "https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/tools.png",
+  },
+  {
+    id: 104,
+    title: "Rename",
+    description: "在线文件批量重命名工具",
+    url: "https://rename.jgrass.xyz/",
+    icon: "/assets/icons/rename-256.ico",
     icon2:
       "https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/tools.png",
   },
