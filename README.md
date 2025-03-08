@@ -7,3 +7,7 @@
 <https://jgrass.cc>
 
 <https://jasongrass.github.io>
+
+## 发布
+
+`npm run deploy`
