@@ -9,6 +9,14 @@ const template = {
 
 export const activeBookmarks = [
   {
+    id: 100,
+    title: "个人博客",
+    description: "个人博客，记录学习笔记等",
+    url: "https://blog.jgrass.cc/",
+    icon: "/assets/icons/avatar.png",
+    icon2: "",
+  },
+  {
     id: 101,
     title: "博客园",
     description: "记录问题调查过程，学习笔记等",
